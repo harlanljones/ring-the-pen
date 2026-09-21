@@ -1,0 +1,166 @@
+{
+  "counts": {
+    "files": 30,
+    "games_parsed": 2430,
+    "np_skipped": 27534,
+    "orders_reconstructed": 2430,
+    "orders_unknown": 0,
+    "pa_count": 189311,
+    "subs_applied": 27535,
+    "unknown_reasons": {}
+  },
+  "formula_version": "lineup/1",
+  "generated_by": "scripts/lineup.py (called by scripts/etl.py build --offline)",
+  "license": "Retrosheet data used under the Retrosheet notice (see NOTICE)",
+  "n_upcoming": 3,
+  "purpose": "Reconstructed batting orders and next-3 upcoming batters for the D1b hook-card input",
+  "samples": [
+    {
+      "current": "kwans001",
+      "game": "ANA202504040",
+      "half": 0,
+      "inning": 1,
+      "next3": [
+        "ramij003",
+        "santc002",
+        "manzk001"
+      ],
+      "slot": 1
+    },
+    {
+      "current": "ramij003",
+      "game": "ANA202504040",
+      "half": 0,
+      "inning": 1,
+      "next3": [
+        "santc002",
+        "manzk001",
+        "thoml002"
+      ],
+      "slot": 2
+    },
+    {
+      "current": "santc002",
+      "game": "ANA202504040",
+      "half": 0,
+      "inning": 1,
+      "next3": [
+        "manzk001",
+        "thoml002",
+        "noelj001"
+      ],
+      "slot": 3
+    },
+    {
+      "current": "manzk001",
+      "game": "ANA202504040",
+      "half": 0,
+      "inning": 1,
+      "next3": [
+        "thoml002",
+        "noelj001",
+        "naylb001"
+      ],
+      "slot": 4
+    },
+    {
+      "current": "thoml002",
+      "game": "ANA202504040",
+      "half": 0,
+      "inning": 1,
+      "next3": [
+        "noelj001",
+        "naylb001",
+        "ariag002"
+      ],
+      "slot": 5
+    },
+    {
+      "current": "wardt002",
+      "game": "ANA202504040",
+      "half": 1,
+      "inning": 1,
+      "next3": [
+        "troum001",
+        "solej001",
+        "moncy001"
+      ],
+      "slot": 1
+    },
+    {
+      "current": "troum001",
+      "game": "ANA202504040",
+      "half": 1,
+      "inning": 1,
+      "next3": [
+        "solej001",
+        "moncy001",
+        "ohopl001"
+      ],
+      "slot": 2
+    },
+    {
+      "current": "solej001",
+      "game": "ANA202504040",
+      "half": 1,
+      "inning": 1,
+      "next3": [
+        "moncy001",
+        "ohopl001",
+        "schan001"
+      ],
+      "slot": 3
+    },
+    {
+      "current": "moncy001",
+      "game": "ANA202504040",
+      "half": 1,
+      "inning": 1,
+      "next3": [
+        "ohopl001",
+        "schan001",
+        "rengl001"
+      ],
+      "slot": 4
+    },
+    {
+      "current": "ohopl001",
+      "game": "ANA202504040",
+      "half": 1,
+      "inning": 1,
+      "next3": [
+        "schan001",
+        "rengl001",
+        "adelj001"
+      ],
+      "slot": 5
+    },
+    {
+      "current": "schan001",
+      "game": "ANA202504040",
+      "half": 1,
+      "inning": 1,
+      "next3": [
+        "rengl001",
+        "adelj001",
+        "newmk001"
+      ],
+      "slot": 6
+    },
+    {
+      "current": "noelj001",
+      "game": "ANA202504040",
+      "half": 0,
+      "inning": 2,
+      "next3": [
+        "naylb001",
+        "ariag002",
+        "roccb001"
+      ],
+      "slot": 6
+    }
+  ],
+  "schema_version": 1,
+  "source_manifest_sha256": "c5ac84ec00a0f5b89a36cd64f71125f55ed2368bd5439fa9fb86de11928f9ea3",
+  "unknown_pitch_count_gate": "NP records are non-PA and never advance the on-deck pointer; a blank pitch field on an NP record is not an unknown PA."
+}

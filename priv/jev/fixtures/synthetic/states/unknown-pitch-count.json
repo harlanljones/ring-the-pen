@@ -1,0 +1,26 @@
+{
+  "bullpen_state": "available",
+  "inning": 7,
+  "leverage_index": 2.4,
+  "outs": 1,
+  "pitch_count": null,
+  "prior_rate": 0.33,
+  "runners_on": 2,
+  "score_diff": -1,
+  "upcoming": [
+    {
+      "n": 18,
+      "rate": 0.312
+    },
+    {
+      "n": 7,
+      "rate": 0.25
+    },
+    {
+      "n": null,
+      "rate": null
+    }
+  ],
+  "w_bvp": 0.47368421052631576,
+  "w_prior": 0.5263157894736842
+}

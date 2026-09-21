@@ -1,0 +1,464 @@
+{
+  "description": "Frozen external inputs for Ring The Pen; raw bulk stays out of git.",
+  "inputs": [
+    {
+      "bytes": 12275155,
+      "files": [
+        {
+          "bytes": 406496,
+          "name": "2025ANA.EVA",
+          "rows": 7221,
+          "sha256": "edd18f7b549c914c99373c89993866fa281bda6371081d624458d44c5e8098e6"
+        },
+        {
+          "bytes": 411776,
+          "name": "2025ARI.EVN",
+          "rows": 7282,
+          "sha256": "ab6596f7fa202bd48f11e3b623d33daf2965610da5836aacaae77ceca92123d1"
+        },
+        {
+          "bytes": 417899,
+          "name": "2025ATH.EVA",
+          "rows": 7458,
+          "sha256": "25db2e2a0f119b168d980dd6bf08a49ff4508301631faa118ab34e8367b5ee5d"
+        },
+        {
+          "bytes": 404681,
+          "name": "2025ATL.EVN",
+          "rows": 7202,
+          "sha256": "da534070d9dfeee5e2a5dd49561eb19ec656456be8ccbff799ebf7deb0f9ee9c"
+        },
+        {
+          "bytes": 409110,
+          "name": "2025BAL.EVA",
+          "rows": 7238,
+          "sha256": "bec8239328cb27198e325325f77ab74831a760fa273df0ac588da65990de29e9"
+        },
+        {
+          "bytes": 417079,
+          "name": "2025BOS.EVA",
+          "rows": 7379,
+          "sha256": "5e5e48f02026489b432497a8cf404d4109cf7cbba41695efbe969b6992f69dcd"
+        },
+        {
+          "bytes": 412981,
+          "name": "2025CHA.EVA",
+          "rows": 7270,
+          "sha256": "1095eaad633e8af5c65392d732900b0b3f6f4518c5009681289f7ba7e2363fa6"
+        },
+        {
+          "bytes": 404097,
+          "name": "2025CHN.EVN",
+          "rows": 7124,
+          "sha256": "240e53e8326f08a841c7dc3f4b145da06a5c065693239251fa6765fd4b6ca59b"
+        },
+        {
+          "bytes": 406366,
+          "name": "2025CIN.EVN",
+          "rows": 7148,
+          "sha256": "5225a4d27ac2b51c281c3fc1d44a05820a420c8efd8cb89428dc1adf8ee627a7"
+        },
+        {
+          "bytes": 401861,
+          "name": "2025CLE.EVA",
+          "rows": 7095,
+          "sha256": "24d0ea1f269cf863aceb7e6931afdbf1e4c855b28c09e7ff1deeab1e9f589f08"
+        },
+        {
+          "bytes": 413616,
+          "name": "2025COL.EVN",
+          "rows": 7436,
+          "sha256": "d9984baeb61a0bae3675a62073d1e8a7b90d569effa2c823dc0b351495f7fca9"
+        },
+        {
+          "bytes": 408631,
+          "name": "2025DET.EVA",
+          "rows": 7210,
+          "sha256": "85b2782bd7c5b7bca52d24ea08aa18fa166d79aa097a869b873186187b420541"
+        },
+        {
+          "bytes": 402633,
+          "name": "2025HOU.EVA",
+          "rows": 7121,
+          "sha256": "edd2540456e292bacf399378c558b1e49975c61d558f0a689a99e4b1a95cc885"
+        },
+        {
+          "bytes": 407906,
+          "name": "2025KCA.EVA",
+          "rows": 7146,
+          "sha256": "1401da29183e4ce27a0b627e3b330ef90fe506ec2515a4df54b8aef4669c10b2"
+        },
+        {
+          "bytes": 413111,
+          "name": "2025LAN.EVN",
+          "rows": 7309,
+          "sha256": "63023decd47daaf2423e65405cf7a447d57f6ab03ba1f4005c8ce8a2b9e5c4e8"
+        },
+        {
+          "bytes": 412450,
+          "name": "2025MIA.EVN",
+          "rows": 7320,
+          "sha256": "1004aabbeaf2efd120fa2f23f9b3803612697cf00448d4f330f8a1e97cb52889"
+        },
+        {
+          "bytes": 407308,
+          "name": "2025MIL.EVN",
+          "rows": 7192,
+          "sha256": "f7c777486c16ff6d54f1f81f2563cf454ed39e0dcefe443076aa762f4e57ec16"
+        },
+        {
+          "bytes": 420964,
+          "name": "2025MIN.EVA",
+          "rows": 7441,
+          "sha256": "f31402ca55775b2f83393c8f18cb4c78f93673cbec4173791198c1ff2ef40fe7"
+        },
+        {
+          "bytes": 408129,
+          "name": "2025NYA.EVA",
+          "rows": 7199,
+          "sha256": "edc66f79c598f3043dadf0a82975837ec080ab339a7fef5cf9ca578e5f57f4af"
+        },
+        {
+          "bytes": 412509,
+          "name": "2025NYN.EVN",
+          "rows": 7313,
+          "sha256": "e1b13c73837df7091d98b2c4fc9465cb123478c2ab1aac855ca32069e949a78c"
+        },
+        {
+          "bytes": 405743,
+          "name": "2025PHI.EVN",
+          "rows": 7176,
+          "sha256": "091282d84ca6999af93b3d2cea95d1d38ec5ec9092dde0a213a27c409e2b1f7f"
+        },
+        {
+          "bytes": 400865,
+          "name": "2025PIT.EVN",
+          "rows": 7050,
+          "sha256": "df24e7f0523947def51b06754246cf15e994f1091619189498e4f5d3718cd27d"
+        },
+        {
+          "bytes": 404974,
+          "name": "2025SDN.EVN",
+          "rows": 7097,
+          "sha256": "b6e8b8e17ea7bb1c29dea59cff8433cfcc2228b835145969fa173df4fcbb8df5"
+        },
+        {
+          "bytes": 405989,
+          "name": "2025SEA.EVA",
+          "rows": 7159,
+          "sha256": "567837367d8aff09e1fd59445d8e5bb0347b4426255b76a6fc24f5fc972682dd"
+        },
+        {
+          "bytes": 407264,
+          "name": "2025SFN.EVN",
+          "rows": 7170,
+          "sha256": "708f83fa79b402f0fdbbd6369cec2962ef3a2a8f796618da015f1e908e4ebf74"
+        },
+        {
+          "bytes": 403934,
+          "name": "2025SLN.EVN",
+          "rows": 7113,
+          "sha256": "1363408e5a88d4ac625e14537059e3d381d25c2eafae6819c59195a7a76bb184"
+        },
+        {
+          "bytes": 414497,
+          "name": "2025TBA.EVA",
+          "rows": 7272,
+          "sha256": "04b3a682e201e6d11122051a6f5a277974644eb69ce97af2240ab2596152d926"
+        },
+        {
+          "bytes": 407437,
+          "name": "2025TEX.EVA",
+          "rows": 7148,
+          "sha256": "9940a1b4697148e5858b20c26e2be959750a3f7d2416777e0f481ced023f03dc"
+        },
+        {
+          "bytes": 417539,
+          "name": "2025TOR.EVA",
+          "rows": 7303,
+          "sha256": "c525bdbf59b3f9fb176f3717b8e5c3f1a9fa0689484a0cb72fa007307436d26a"
+        },
+        {
+          "bytes": 407310,
+          "name": "2025WAS.EVN",
+          "rows": 7253,
+          "sha256": "f133dfd7dc240cf101a21bcd66bd3d69b9ed795ea786b26de152c2625502cb4a"
+        }
+      ],
+      "id": "retrosheet-2025-events",
+      "kind": "directory",
+      "license": "Retrosheet notice",
+      "path": "2025eve",
+      "pattern": "*.EV*",
+      "row_kind": "play_records",
+      "rows": 216845,
+      "sha256": "f7e0b31386ca07fb45b3600667df353c62227e615dbd82f7d8b81dd3a85e1300",
+      "source": "Retrosheet 2025 regular-season event files (.EVA/.EVN)"
+    },
+    {
+      "bytes": 12843544,
+      "files": [
+        {
+          "bytes": 6426693,
+          "name": "2025.EBA",
+          "rows": 157161,
+          "sha256": "655075abc2696075c7b0566b4f4d39c6367a3b63eb44043ec4b65af807551a13"
+        },
+        {
+          "bytes": 6358443,
+          "name": "2025.EBN",
+          "rows": 155736,
+          "sha256": "ad403bf1b44fd2a684bbf4ab1a23a8e0043f9bebde0da7db020f03958135387d"
+        },
+        {
+          "bytes": 2218,
+          "name": "ANA2025.ROS",
+          "rows": 65,
+          "sha256": "150c4d429f1432f5a330f644bcb84609e22f50de95019d517c47c48c92aea3f5"
+        },
+        {
+          "bytes": 2241,
+          "name": "ARI2025.ROS",
+          "rows": 65,
+          "sha256": "e90a3afd2212c4bbd26d984e887da9617f40edb32ef9330c778131dce1eab53a"
+        },
+        {
+          "bytes": 1957,
+          "name": "ATH2025.ROS",
+          "rows": 58,
+          "sha256": "605133d87f6d89658129a79601b884a7b9c261bfc679eacb4a8f7255160f9d76"
+        },
+        {
+          "bytes": 2425,
+          "name": "ATL2025.ROS",
+          "rows": 71,
+          "sha256": "d152eab89638dba0f69b7de9bd480a7be7e1b8343fa515479aa5d64df030d0f8"
+        },
+        {
+          "bytes": 2412,
+          "name": "BAL2025.ROS",
+          "rows": 70,
+          "sha256": "ffd79a8e93d2c53bfb4371a6768ee9b285a1797a1ae8c8d0053580b32c7dfd9c"
+        },
+        {
+          "bytes": 1925,
+          "name": "BOS2025.ROS",
+          "rows": 56,
+          "sha256": "46f00a0a1d9f074820d9fc186b5fea6bbb5f925edcf09b5b85e3d0f1415bdf71"
+        },
+        {
+          "bytes": 2094,
+          "name": "CHA2025.ROS",
+          "rows": 62,
+          "sha256": "9026c45978a78786d73c8eabedf4e275cac3f3d71ab8898d9a643a2d871ff03c"
+        },
+        {
+          "bytes": 1766,
+          "name": "CHN2025.ROS",
+          "rows": 52,
+          "sha256": "ddf4b44fc3cb8fd296b32fe19e555ef0ba61d8249811d1f5f38844e5efa45e8d"
+        },
+        {
+          "bytes": 1803,
+          "name": "CIN2025.ROS",
+          "rows": 53,
+          "sha256": "dd21ad5de6ab5456ccf24f2645420d65be0fe536adec345dc5607b48ba632b5e"
+        },
+        {
+          "bytes": 1552,
+          "name": "CLE2025.ROS",
+          "rows": 46,
+          "sha256": "5756f16391b58f120381fb9a1b00bda86272a36772e2da36869594ee52c86690"
+        },
+        {
+          "bytes": 1949,
+          "name": "COL2025.ROS",
+          "rows": 57,
+          "sha256": "59ed57e5b7210370391eddbaeab4894c5e1375800427d6116172462b3de03a1f"
+        },
+        {
+          "bytes": 1955,
+          "name": "DET2025.ROS",
+          "rows": 58,
+          "sha256": "9cba28205a20c6962602d180cba28abd9133a250b3607df43c6a17ba1779a505"
+        },
+        {
+          "bytes": 2050,
+          "name": "HOU2025.ROS",
+          "rows": 60,
+          "sha256": "b633aa641a2048df8b80274ad8c9af91398ddfeccd65f8b4afba962c36261674"
+        },
+        {
+          "bytes": 1655,
+          "name": "KCA2025.ROS",
+          "rows": 49,
+          "sha256": "b4941ed9a64a542fee8da7132c786be289b60be289dd1d4d6292434b954f81b2"
+        },
+        {
+          "bytes": 2105,
+          "name": "LAN2025.ROS",
+          "rows": 62,
+          "sha256": "9676005b5313072c5156f7ffd8d700e2ce764218acf7463403aed4f172f1dc63"
+        },
+        {
+          "bytes": 1910,
+          "name": "MIA2025.ROS",
+          "rows": 56,
+          "sha256": "7718663569e28f3884a3f0f5a81e9e5443439ba83ac278415f691c73a16508f8"
+        },
+        {
+          "bytes": 1886,
+          "name": "MIL2025.ROS",
+          "rows": 55,
+          "sha256": "4fc2eb319185db99b786d7fe607003219fc955a8831bc7447b292fcf17eb0b20"
+        },
+        {
+          "bytes": 1936,
+          "name": "MIN2025.ROS",
+          "rows": 57,
+          "sha256": "90164d92d958eb6ea07e8cad8501dfc991c979d64d227ef71cc01657d5c2134d"
+        },
+        {
+          "bytes": 1777,
+          "name": "NYA2025.ROS",
+          "rows": 52,
+          "sha256": "a9423e116513a89493c66f17f469491720f898307cefa80739e026b932109fe7"
+        },
+        {
+          "bytes": 2121,
+          "name": "NYN2025.ROS",
+          "rows": 63,
+          "sha256": "0f0ab45edac897ba30d04285790f2056775e24195320e114fca9025c88fb1781"
+        },
+        {
+          "bytes": 1587,
+          "name": "PHI2025.ROS",
+          "rows": 47,
+          "sha256": "acfe9d68dfb77d7160ec570e8d72cdf74cb9eca5f778a85c65c03e4cd392a01e"
+        },
+        {
+          "bytes": 1959,
+          "name": "PIT2025.ROS",
+          "rows": 57,
+          "sha256": "9a580a44a5a6ed1de849cc9c479bcd43c39309c24b1c30b25559e312bda2cf3f"
+        },
+        {
+          "bytes": 1769,
+          "name": "SDN2025.ROS",
+          "rows": 52,
+          "sha256": "ee8ee2ab86af92cc4255a34371b374e36085459da1d4966f1ed6f4d738ce580d"
+        },
+        {
+          "bytes": 1826,
+          "name": "SEA2025.ROS",
+          "rows": 54,
+          "sha256": "f052cbc8a68aa5cd66320211bf3c093ed1241bb7814f0108a4944755c3ef90a0"
+        },
+        {
+          "bytes": 1806,
+          "name": "SFN2025.ROS",
+          "rows": 53,
+          "sha256": "d98493b77c0675fff0eaa924fe53f01e61169e87aac38bc9720fff103e33457b"
+        },
+        {
+          "bytes": 1498,
+          "name": "SLN2025.ROS",
+          "rows": 44,
+          "sha256": "842e4fe6733346eb0ab6f2f13083d29320f66944ba252084e5897cfca81fe173"
+        },
+        {
+          "bytes": 1905,
+          "name": "TBA2025.ROS",
+          "rows": 56,
+          "sha256": "b331aca58289ad8da80b5289eaf6d16588ce88ad960d62a7ef10180b0aab4269"
+        },
+        {
+          "bytes": 797,
+          "name": "TEAM2025",
+          "rows": 32,
+          "sha256": "b2905474d23514ec3882f2c1042f73a086ee4d4c634890e6d110b9cf30c9fde3"
+        },
+        {
+          "bytes": 1820,
+          "name": "TEX2025.ROS",
+          "rows": 54,
+          "sha256": "b0c34860ccce9be9777f559b367c0bb6e8f7f081583b6a64e85aee21186566d7"
+        },
+        {
+          "bytes": 1995,
+          "name": "TOR2025.ROS",
+          "rows": 58,
+          "sha256": "7018c94bea1cc6e24868814c74e178485aaf1e7f6976440ca603fb4ceeb2cd66"
+        },
+        {
+          "bytes": 1709,
+          "name": "WAS2025.ROS",
+          "rows": 51,
+          "sha256": "b5afe67f4a279084d32ce5229f1b01c7a1fc0d2e4d1cd8485c105cd9c80865c6"
+        }
+      ],
+      "id": "retrosheet-2025-box",
+      "kind": "directory",
+      "license": "Retrosheet notice",
+      "path": "2025box",
+      "pattern": "*",
+      "row_kind": "text_lines",
+      "rows": 314622,
+      "sha256": "87103f6598e0e9e431826a87786791069085cb1b474169e2f7dc6f180c9f6661",
+      "source": "Retrosheet 2025 box/roster files (.EBA/.EBN/.ROS)"
+    },
+    {
+      "bytes": 108700447,
+      "id": "retrosheet-2025-plays",
+      "kind": "file",
+      "license": "Retrosheet notice",
+      "path": "2025plays/2025plays.csv",
+      "row_kind": "csv_data",
+      "rows": 193767,
+      "sha256": "0950f25a8f559ffbcef7a6e646c1a0520dce4efe181111e9b0a15a9585bfd2ea",
+      "source": "Retrosheet 2025 play-by-play CSV (includes nump, pa, pitches)"
+    },
+    {
+      "bytes": 768,
+      "id": "retrosheet-2025-re24",
+      "kind": "file",
+      "license": "Retrosheet notice",
+      "path": "2025_RE24_Values.csv",
+      "row_kind": "csv_data",
+      "rows": 8,
+      "sha256": "b9869a1befaeb62e5eb91571aa5c3516b49536b3a672691604ec24af91e484c0",
+      "source": "Retrosheet 2025 run-expectancy (RE24) values"
+    },
+    {
+      "bytes": 229376,
+      "files": [
+        {
+          "bytes": 114688,
+          "name": "bevent.exe",
+          "rows": 0,
+          "sha256": "87ddea13486f19b803738e5ec9874bf0c49f882ae0a0941b2a37b16ed57fafbc"
+        },
+        {
+          "bytes": 114688,
+          "name": "bgame.exe",
+          "rows": 0,
+          "sha256": "60b5c8cb47da134be650e98677e0a4759e5703e5eb94f2a3ebab1678bfa31f80"
+        }
+      ],
+      "id": "chadwick-tools",
+      "kind": "file_group",
+      "license": "Chadwick (see bevent/bgame), not Retrosheet",
+      "paths": [
+        "bevent.exe",
+        "bgame.exe"
+      ],
+      "row_kind": null,
+      "rows": 0,
+      "sha256": "306646a83616cbd98c4f8130ca9af1a575e29b6af220445fca3e828e8e125121",
+      "source": "Chadwick bevent/bgame binaries (Win32; Linux execution UNVERIFIED)"
+    }
+  ],
+  "raw_dir_default": "data/raw",
+  "retrosheet_notice": "The information used here was obtained free of charge from and is copyrighted by Retrosheet. Interested parties may contact Retrosheet at 20 Sunset Rd., Newark, DE 19711.",
+  "schema_version": 1
+}

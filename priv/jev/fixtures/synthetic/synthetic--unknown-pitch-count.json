@@ -1,0 +1,180 @@
+{
+  "answers": {
+    "danger_pa_now": {
+      "confidence": 0.72,
+      "noul": 0.28,
+      "type": "noul"
+    },
+    "danger_window_next3": {
+      "confidence": 0.55,
+      "noul": 0.55,
+      "type": "noul"
+    },
+    "hook_urgency": {
+      "confidence": 0.54,
+      "description": "The presented state shows a reliever should be warming now.",
+      "label": "warm",
+      "legend": {
+        "0": {
+          "description": "The presented state shows no urgency signal for this plate appearance.",
+          "label": "calm"
+        },
+        "1": {
+          "description": "The presented state shows an early but not immediate urgency signal.",
+          "label": "watch"
+        },
+        "2": {
+          "description": "The presented state shows a reliever should be warming now.",
+          "label": "warm"
+        },
+        "3": {
+          "description": "The presented state shows the optimal removal point is now or this plate appearance.",
+          "label": "pull_window"
+        },
+        "4": {
+          "description": "The presented state shows removal is urgent immediately, this at-bat.",
+          "label": "yank"
+        }
+      },
+      "level": 2,
+      "levels": [
+        {
+          "label": "calm",
+          "probability": 0.06
+        },
+        {
+          "label": "watch",
+          "probability": 0.13
+        },
+        {
+          "label": "warm",
+          "probability": 0.54
+        },
+        {
+          "label": "pull_window",
+          "probability": 0.19
+        },
+        {
+          "label": "yank",
+          "probability": 0.08
+        }
+      ],
+      "probabilities": {
+        "0": 0.06,
+        "1": 0.13,
+        "2": 0.54,
+        "3": 0.19,
+        "4": 0.08
+      },
+      "score": 2.1,
+      "type": "score"
+    },
+    "pull_decision": {
+      "choice": "soft_hook",
+      "confidence": 0.62,
+      "description": "The presented state jointly supports warming a reliever now while leaving the current pitcher in.",
+      "options": [
+        {
+          "option": "pull_now",
+          "probability": 0.08
+        },
+        {
+          "option": "ride",
+          "probability": 0.12
+        },
+        {
+          "option": "soft_hook",
+          "probability": 0.55
+        },
+        {
+          "option": "emergency_hook",
+          "probability": 0.05
+        },
+        {
+          "option": "other",
+          "probability": 0.2
+        }
+      ],
+      "probabilities": {
+        "emergency_hook": 0.05,
+        "other": 0.2,
+        "pull_now": 0.08,
+        "ride": 0.12,
+        "soft_hook": 0.55
+      },
+      "type": "choice"
+    }
+  },
+  "model": "synthetic-fixture",
+  "questions_hash": "sha256:49b55d81d79fd3c1ade7f3016b967d02fbe5c76dbdc509e4c83f2550ac14a2b8",
+  "recorded_at": "2026-09-21T00:00:00Z",
+  "response": {
+    "answers": {
+      "danger_pa_now": {
+        "noul": 0.28,
+        "type": "noul"
+      },
+      "danger_window_next3": {
+        "noul": 0.55,
+        "type": "noul"
+      },
+      "hook_urgency": {
+        "confidence": 0.54,
+        "legend": {
+          "0": {
+            "description": "The presented state shows no urgency signal for this plate appearance.",
+            "label": "calm"
+          },
+          "1": {
+            "description": "The presented state shows an early but not immediate urgency signal.",
+            "label": "watch"
+          },
+          "2": {
+            "description": "The presented state shows a reliever should be warming now.",
+            "label": "warm"
+          },
+          "3": {
+            "description": "The presented state shows the optimal removal point is now or this plate appearance.",
+            "label": "pull_window"
+          },
+          "4": {
+            "description": "The presented state shows removal is urgent immediately, this at-bat.",
+            "label": "yank"
+          }
+        },
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.13,
+          "2": 0.54,
+          "3": 0.19,
+          "4": 0.08
+        },
+        "score": 2.1,
+        "type": "score"
+      },
+      "pull_decision": {
+        "choice": "soft_hook",
+        "confidence": 0.62,
+        "probabilities": {
+          "emergency_hook": 0.05,
+          "other": 0.2,
+          "pull_now": 0.08,
+          "ride": 0.12,
+          "soft_hook": 0.55
+        },
+        "type": "choice"
+      }
+    },
+    "model": "synthetic-fixture",
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  },
+  "schema_version": 1,
+  "source_lineage": {
+    "kind": "synthetic",
+    "note": "SYNTHETIC hand-authored test input; not a recorded model response"
+  },
+  "state_hash": "sha256:e88d6f520726bbe8bb52346ac3f442972915d9ecb217ae1f95c676477c765120"
+}

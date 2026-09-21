@@ -1,0 +1,46 @@
+{
+  "name": "tango_hook_parity",
+  "purpose": "DEC-2 (ring-the-pen) cross-engine parity fixture: frozen hook-path golden vector from the-tango's PRD golden request, the ETL/Elixir boundary contract for RTP-06/RTP-08.",
+  "source_repo": "the-tango",
+  "source_fixture": "tests/golden/prd_request.json",
+  "source_digest_sha256": "a9ee64ff21f7961815ec1686dd57b235db236fa6e984c12a3032e43f1d147b13",
+  "parity_vector_fixture": "the-tango tests/golden/parity_vector.json",
+  "parity_vector_digest_sha256": "6d777520ef3eb81070df1973f8301173d56c0bd5c1ee87f9ba3663b91c31a1e2",
+  "engine_version": "2.0.0",
+  "generated_by": "uv run python tests/dump_parity_vector.py (the-tango)",
+  "provenance": {
+    "defensive_hook": "GUESS (tango.params.DEF_HOOK_*; TG-2 placeholders pending Gate 2)",
+    "opponent_self_hook": "GUESS (tango.params.SELF_HOOK_*; inline literals extracted TG-3, pending Gate 2)",
+    "note": "No number in this fixture is calibrated; serve only with the uncalibrated label per DEC-2 guardrails."
+  },
+  "vector": {
+    "leverage_index": 4.905225,
+    "leverage_tier": "CRITICAL",
+    "win_expectancy_baseline": 0.493526,
+    "run_expectancy": 1.13,
+    "starter": {
+      "stuff_plus_now": 88.747613,
+      "stuff_plus_delta": -11.252387,
+      "decay_state": "COMPROMISED",
+      "is_compromised": true,
+      "hazard_hook_probability": 0.934124
+    },
+    "defensive_hook": {
+      "hazard_probability": 0.843772,
+      "decay_state": "COMPROMISED"
+    },
+    "action": "PIVOT_SUBSTITUTION",
+    "best_candidate_id": 680777,
+    "best_net_wpa": 0.018126,
+    "candidates": [
+      {
+        "player_id": 680777,
+        "net_wpa": 0.018126
+      },
+      {
+        "player_id": 664056,
+        "net_wpa": -0.03499
+      }
+    ]
+  }
+}

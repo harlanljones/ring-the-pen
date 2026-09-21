@@ -1,0 +1,176 @@
+{
+  "bridge_convention": {
+    "formula": "wpa = woba_delta * woba_to_wpa_critical * (leverage_index / li_critical_reference)",
+    "provenance": "the-tango tango.matchup.woba_delta_to_wpa/2 (DEC-2 Option A reuse); linear in pLI, critical constant pinned at pLI = li_critical_reference = 3.0. Sanity: 0.022 wOBA at li=3.0 -> 0.0121 WPA magnitude, inside the PRD's stated -0.010..-0.014 band."
+  },
+  "constants": {
+    "delta_tango_woba": {
+      "provenance": "PRD_DEFAULT",
+      "source": "the-tango tango.params.DELTA_TANGO_WOBA: The Tango Cold-Bench Penalty, canonical figure from Tango et al., The Book (PRD 3.4).",
+      "value": 0.022
+    },
+    "high_li_threshold": {
+      "provenance": "PRD_DEFAULT",
+      "source": "the-tango tango.params.HIGH_LI_THRESHOLD: pLI above which pitches accrue the phi stress multiplier (PRD 3.2).",
+      "value": 1.5
+    },
+    "li_critical_reference": {
+      "provenance": "PRD_DEFAULT",
+      "source": "the-tango tango.matchup.LI_CRITICAL_REFERENCE (=3.0): leverage at which WOBA_TO_WPA_CRITICAL is expressed.",
+      "value": 3.0
+    },
+    "phi_high_li": {
+      "provenance": "PRD_DEFAULT",
+      "source": "the-tango tango.params.PHI_HIGH_LI: extra stress weight on pitches thrown at pLI > 1.5 (PRD 3.2).",
+      "value": 0.4
+    },
+    "runs_per_win": {
+      "provenance": "PRD_DEFAULT",
+      "source": "the-tango tango.params.RUNS_PER_WIN: runs per marginal win; converts run-scale costs to WPA.",
+      "value": 9.8
+    },
+    "woba_scale": {
+      "provenance": "PRD_DEFAULT",
+      "source": "the-tango tango.params.WOBA_SCALE: standard wOBA->runs scale (FanGraphs convention, ~1.15-1.30 by season).",
+      "value": 1.157
+    },
+    "woba_to_wpa_critical": {
+      "provenance": "GUESS",
+      "source": "the-tango tango.params.WOBA_TO_WPA_CRITICAL: converts a wOBA delta to a WPA delta in critical leverage; calibrated so that 0.022 wOBA maps into the PRD's stated -0.010..-0.014 WPA band. Scales with pLI. Uncalibrated.",
+      "value": 0.55
+    }
+  },
+  "formula_version": "re24-leverage/1",
+  "license": "Retrosheet data used under the Retrosheet notice (see NOTICE)",
+  "purpose": "2025 base-out run-expectancy states, leverage convention constants, and the wOBA->WPA bridge for the D3 hook-card/pen inputs",
+  "re24_states": [
+    {
+      "outs": 0,
+      "run_expectancy": 0.500445544719696,
+      "runners": "-- -- --"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 0.2680968642234802,
+      "runners": "-- -- --"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.10528691858053207,
+      "runners": "-- -- --"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 0.895990252494812,
+      "runners": "1B -- --"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 0.5161476135253906,
+      "runners": "1B -- --"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.22747604548931122,
+      "runners": "1B -- --"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 1.167762041091919,
+      "runners": "-- 2B --"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 0.6652745604515076,
+      "runners": "-- 2B --"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.32722344994544983,
+      "runners": "-- 2B --"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 1.2921348810195923,
+      "runners": "-- -- 3B"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 0.907489001750946,
+      "runners": "-- -- 3B"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.340753436088562,
+      "runners": "-- -- 3B"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 1.6098765134811401,
+      "runners": "1B 2B --"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 0.957112729549408,
+      "runners": "1B 2B --"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.4609020948410034,
+      "runners": "1B 2B --"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 1.8482252359390259,
+      "runners": "1B -- 3B"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 1.2402174472808838,
+      "runners": "1B -- 3B"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.47584906220436096,
+      "runners": "1B -- 3B"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 1.9920382499694824,
+      "runners": "-- 2B 3B"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 1.4201797246932983,
+      "runners": "-- 2B 3B"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.5746791362762451,
+      "runners": "-- 2B 3B"
+    },
+    {
+      "outs": 0,
+      "run_expectancy": 2.5334346294403076,
+      "runners": "1B 2B 3B"
+    },
+    {
+      "outs": 1,
+      "run_expectancy": 1.6110315322875977,
+      "runners": "1B 2B 3B"
+    },
+    {
+      "outs": 2,
+      "run_expectancy": 0.7471064925193787,
+      "runners": "1B 2B 3B"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "description": null,
+    "filename": "2025_RE24_Values.csv",
+    "manifest_id": "retrosheet-2025-re24",
+    "rows": 8,
+    "sha256": "b9869a1befaeb62e5eb91571aa5c3516b49536b3a672691604ec24af91e484c0"
+  }
+}

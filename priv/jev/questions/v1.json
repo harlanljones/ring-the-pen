@@ -1,0 +1,72 @@
+{
+  "pack": "ring-the-pen/questions/v1",
+  "questions": [
+    {
+      "id": "pull_decision",
+      "question": {
+        "criteria": {
+          "emergency_hook": "The presented state jointly supports removing the pitcher immediately, before warm-up is complete, because of what the presented numbers show.",
+          "other": "None of the listed removal decisions is supported by the presented state.",
+          "pull_now": "The presented state jointly supports removing the pitcher before this plate appearance is completed.",
+          "ride": "The presented state jointly supports letting the pitcher face this plate appearance without restriction.",
+          "soft_hook": "The presented state jointly supports warming a reliever now while leaving the current pitcher in."
+        },
+        "instructions": "Judge the supplied precomputed numeric state for this in-PA pitcher-removal decision. Do not calculate or infer any statistic that is not presented.",
+        "type": "choice"
+      }
+    },
+    {
+      "id": "hook_urgency",
+      "question": {
+        "criteria": [
+          {
+            "description": "The presented state shows no urgency signal for this plate appearance.",
+            "label": "calm"
+          },
+          {
+            "description": "The presented state shows an early but not immediate urgency signal.",
+            "label": "watch"
+          },
+          {
+            "description": "The presented state shows a reliever should be warming now.",
+            "label": "warm"
+          },
+          {
+            "description": "The presented state shows the optimal removal point is now or this plate appearance.",
+            "label": "pull_window"
+          },
+          {
+            "description": "The presented state shows removal is urgent immediately, this at-bat.",
+            "label": "yank"
+          }
+        ],
+        "instructions": "Rate the urgency of the removal decision from the supplied precomputed numeric state only. Do not recompute any sample qualification or rate.",
+        "type": "score"
+      }
+    },
+    {
+      "id": "danger_pa_now",
+      "question": {
+        "criteria": {
+          "false": "The current batter reaching base safely or forcing in a run is not likely.",
+          "true": "The current batter reaching base safely or forcing in a run is likely."
+        },
+        "instructions": "Based only on the supplied precomputed numeric state for this plate appearance, is the current batter likely to reach base safely or force in a run? Do not calculate any probability from the presented numbers; answer from the state as presented.",
+        "type": "noul"
+      }
+    },
+    {
+      "id": "danger_window_next3",
+      "question": {
+        "criteria": {
+          "false": "At least one of the next 3 upcoming batters reaching base safely or forcing in a run is not likely.",
+          "true": "At least one of the next 3 upcoming batters reaching base safely or forcing in a run is likely."
+        },
+        "instructions": "Based only on the supplied precomputed numeric state covering the current plate appearance and the next 3 upcoming batters, is any of those 3 upcoming batters likely to reach base safely or force in a run against this pitcher? Do not calculate any probability from the presented numbers; answer from the state as presented.",
+        "type": "noul"
+      }
+    }
+  ],
+  "questions_hash": "sha256:49b55d81d79fd3c1ade7f3016b967d02fbe5c76dbdc509e4c83f2550ac14a2b8",
+  "schema_version": 1
+}

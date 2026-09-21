@@ -1,0 +1,43 @@
+{
+  "events": {
+    "blank_np": 20405,
+    "blank_pitch": 20406,
+    "files": 30,
+    "play_records": 216845
+  },
+  "formula_version": "universe-a/1",
+  "generated_by": "scripts/etl.py build --offline",
+  "invariants": {
+    "blank_nump_never_counted_as_pitches": true,
+    "event_blank_pitch_is_mostly_np": true,
+    "universe_a_plus_unknown_equals_pa": true
+  },
+  "plays_csv": {
+    "nump_blank": 568,
+    "nump_zero": 761,
+    "pa": 186640,
+    "pa_nump_blank": 0,
+    "pa_nump_positive": 186127,
+    "pa_nump_zero": 513,
+    "rows": 193767,
+    "universe_a": 186127,
+    "unknown": 513
+  },
+  "reconciliation": {
+    "delta": 23078,
+    "event_blank_pitch_np_fraction": 0.999951,
+    "event_play_records": 216845,
+    "note": "Different populations: event files are raw play records; the CSV is a filtered play-by-play export. Reporting both, not silently picking.",
+    "plays_csv_rows": 193767
+  },
+  "schema_version": 1,
+  "source_manifest_sha256": "c5ac84ec00a0f5b89a36cd64f71125f55ed2368bd5439fa9fb86de11928f9ea3",
+  "universe_a": {
+    "definition": "pa=1 AND nump>0",
+    "rows": 186127
+  },
+  "unknown_pitch_count": {
+    "definition": "pa=1 AND nump IS blank OR nump == 0",
+    "rows": 513
+  }
+}

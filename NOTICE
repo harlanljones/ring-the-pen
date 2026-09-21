@@ -1,0 +1,32 @@
+Ring The Pen — required attributions
+===================================
+
+Retrosheet
+----------
+The information used here was obtained free of charge from and is copyrighted
+by Retrosheet. Interested parties may contact Retrosheet at
+20 Sunset Rd., Newark, DE 19711.
+
+Retrosheet data is historical and delayed. It is never served or described as
+live. Raw Retrosheet bulk inputs are not redistributed in this repository; only
+small derived artifacts with provenance are committed, and the attribution
+above is carried with them.
+
+The 2025 inputs pinned for the historical demo (Phase H) are:
+  2025eve/          2025 regular-season event files (.EVA/.EVN)
+  2025box/          2025 box/roster files (.EBA/.EBN/.ROS)
+  2025plays/        2025 play-by-play CSV
+  2025_RE24_Values.csv  2025 run-expectancy (RE24) values
+See data/manifest.json for revisions and SHA-256 digests.
+
+Chadwick
+--------
+bevent.exe and bgame.exe are Chadwick Baseball Bureau tools, used (if at all) to
+parse Retrosheet event files. They are not Retrosheet data and are covered by
+Chadwick's own license; Linux execution is unverified (see ROADMAP DEC-4).
+
+MLB Stats API
+-------------
+No MLB Stats API ("Stats API") live feed is redistributed by this repository.
+Use of the live feed is limited to individual, non-commercial, non-bulk use and
+is not exposed publicly before gate D6 clears in writing. See docs/PRD.md.

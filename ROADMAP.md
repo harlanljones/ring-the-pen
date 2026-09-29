@@ -12,7 +12,7 @@ to establish it. No numbers are invented.
 | Repo | greenfield `harlanljones/ring-the-pen` |
 | Stack | Elixir + Phoenix LiveView (Bandit), Python Makefile ETL, `typesafe_api` / `jev-latest` + offline fixtures |
 | Frozen pins | k=20 · N=3 · D1b reconstruct · universe A (`nump` present) · Elixir LiveView |
-| Status | RTP-01, RTP-02, RTP-05 DONE, TG-1…TG-5 DONE. Decisions settled (DEC-6 deferred). Done 2026-09-21 PM: RTP-07, RTP-09, RTP-10 (recordings pending). Next unblocked: RTP-06 (BvP+shrink), then RTP-08, RTP-11, RTP-12 |
+| Status | RTP-01, RTP-02, RTP-05, RTP-06 DONE, TG-1…TG-5 DONE. Decisions settled (DEC-6 deferred). Done 2026-09-21 PM: RTP-07, RTP-09, RTP-10 (recordings pending). Done 2026-09-29: RTP-06 (k_shrink fit pending real pairs). Next unblocked: RTP-08 (hook-card artifact), then RTP-11, RTP-12 |
 
 ---
 
@@ -356,6 +356,14 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
   (flag) and weight-sum tests against `k_shrink`; `k_shrink` fit reproduced from
   the artifact; no constant presented as calibrated.
 - Exit: D1 satisfied; weights + prior + `k_shrink` provenance present for the lock/UI.
+- Status (2026-09-29): **DONE (math + tests; real-pair wiring pending)** —
+  `scripts/bvp.py` (blend, weights, `underqualified`, variance-components
+  `fit_k_shrink`, `bvp-shrink/1` artifact builder) + `tests/test_bvp.py` (17
+  passed, synthetic-only) + `lib/ring_the_pen/shrink.ex` +
+  `test/ring_the_pen/shrink_test.exs` (14 tests; full `mix test` 49 passed, no
+  key). `k_display=20` gate, `k_shrink` placeholder 1000 `GUESS`/`uncalibrated`.
+  Open: pair extraction from `2025plays.csv` (column mapping unverified, raw
+  absent here) and the real-data `k_shrink` fit — both land with RTP-08.
 
 **RTP-07 — RE24 / leverage / wOBA→WPA bridge**
 - Depends: RTP-05 · Owner: Data ETL

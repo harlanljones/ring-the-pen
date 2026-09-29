@@ -12,7 +12,7 @@ to establish it. No numbers are invented.
 | Repo | greenfield `harlanljones/ring-the-pen` |
 | Stack | Elixir + Phoenix LiveView (Bandit), Python Makefile ETL, `typesafe_api` / `jev-latest` + offline fixtures |
 | Frozen pins | k=20 · N=3 · D1b reconstruct · universe A (`nump` present) · Elixir LiveView |
-| Status | RTP-01, RTP-02, RTP-05, RTP-06 DONE, TG-1…TG-5 DONE. Decisions settled (DEC-6 deferred). Done 2026-09-21 PM: RTP-07, RTP-09, RTP-10 (recordings pending). Done 2026-09-29: RTP-06 (k_shrink fit pending real pairs). Next unblocked: RTP-08 (hook-card artifact), then RTP-11, RTP-12 |
+| Status | RTP-01, RTP-02, RTP-05, RTP-06 DONE, TG-1…TG-5 DONE. Decisions settled (DEC-6 deferred). Done 2026-09-21 PM: RTP-07, RTP-09, RTP-10 (recordings pending). Done 2026-09-29: RTP-06 (k_shrink fit pending real pairs), RTP-11 (lock+gates; RTP-08 wiring pending), RTP-08 schema+builder (frozen real artifact pending raw). Next unblocked: RTP-12 (catalog boundary against the frozen schema, synthetic-tested), then RTP-13 |
 
 ---
 
@@ -388,6 +388,12 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
 - Validation: artifact schema test; outer metrics equal judgment-state metrics;
   counts equal sample values.
 - Exit: D1/D1b/D2 reflected in the frozen artifact; catalog (RTP-12) can load it.
+- Status (2026-09-29): **SCHEMA + BUILDER DONE; frozen real artifact pending** —
+  `scripts/cards.py` (`hook-card/1`, exact keys, `hook:<game>:<pa>` ids,
+  synthetic-by-default) + `tests/test_cards.py` (12 passed, synthetic-only) +
+  `docs/specs/hook-card.md` §3 frozen. Open: real pair wiring (BvP table, D1b
+  next-3, source digests) once `make fetch` reproduces the pinned raw layout;
+  no artifact file committed until then.
 
 ### M2 — Offline lock (Phase H)
 
@@ -430,6 +436,14 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
 - Validation: unit tests per rule + negative tests that a gate cannot be expressed
   as a Noul.
 - Exit: D4 satisfied; thresholds labeled provisional unless D4 says otherwise.
+- Status (2026-09-29): **DONE early (synthetic; RTP-08 wiring pending)** —
+  `lib/ring_the_pen/lock.ex` (certainty-routed act/review/escalate, Noul
+  act/review only, underqualified cap, gate override, provisional thresholds)
+  + `lib/ring_the_pen/gates.ex` (pitch-cap/injured/empty-pen, unknown never
+  fires, Noul-shaped input rejected) + 27 tests; `mix test` 76 passed, format
+  and strict compile clean. Interpretation recorded: Score routes on
+  `confidence` (lock is a confidence lock; direction is displayed, not routed
+  on) — flagged for RTP-24 spec review.
 
 **RTP-12 — Trusted catalog boundary**
 - Depends: RTP-08 · Owner: Catalog

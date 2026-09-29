@@ -29,20 +29,39 @@ routes the card. **Math lives in code only; Jev never computes numbers.**
 
 ## 3. Artifact shape
 
-[UNFROZEN — frozen by RTP-08. Predecessor shape for reference:]
+[FROZEN by RTP-08 (`scripts/cards.py`, `hook-card/1`). Predecessor shape was
+reference only.]
 
 ```
 {
-  "schema_version": <int>,
-  "provenance": { "sources": [...], "formula_version": "...", "license": "...", "purpose": "..." },
-  "cards": [ { ... card ... } ]
+  "schema_version": 1,
+  "formula_version": "hook-card/1",
+  "license": "<Retrosheet notice>",
+  "purpose": "<frozen purpose>",
+  "provenance": { "sources": [{"id": ..., "sha256": ...}],
+                  "bvp_formula": "bvp-shrink/1", "k_display": 20, "n_upcoming": 3 },
+  "synthetic": <bool>,
+  "cards": [ { ... card ... } ]   // ordered by id
 }
 ```
 
+Card id format **[FROZEN]**: `hook:<game_id>:<pa_index>`. The predecessor
+`role:player_id:year` form addressed season cards, not PA cards, and is not
+adopted; RTP-12 enforces this format instead.
+
+Exact card outer keys **[FROZEN]**: `id`, `game_id`, `pa_index`, `synthetic`,
+`judgment_state`, `bvp` (`n`, `xbar`, `m`, `k_shrink`, `posterior`,
+`underqualified`), `samples` (`bvp_n`, `upcoming_n`).
+
+Exact `judgment_state` keys **[FROZEN]** (identical to the
+`RingThePen.Questions` allowlist): `inning`, `outs`, `runners_on`,
+`score_diff`, `pitch_count`, `bullpen_state`, `leverage_index`, `w_bvp`,
+`w_prior`, `prior_rate` (= the prior `m`; the blend is carried by the
+weights), `upcoming` (exactly 3 slots of `n`, `rate`; unknown is `null`).
+
 Required per-card invariants (enforced by the trusted catalog, RTP-12):
 - exact outer key set (unknown keys rejected);
-- stable card id; **[UNFROZEN]** format — candidates: `hook:<game_id>:<pa_index>`
-  or `pitcher:<player_id>:<game_id>` (predecessor used `role:player_id:year`);
+- stable card id `hook:<game_id>:<pa_index>` **[FROZEN]** (candidates retired);
 - outer metrics **equal** the corresponding `judgment_state` metrics for shared
   fields;
 - counts (BvP `n`, IP/PA) equal the `sample` values;

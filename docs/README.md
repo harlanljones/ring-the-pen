@@ -21,6 +21,7 @@ prior-name v0.1.1 PRD is **not on disk anywhere**; D0–D5 are therefore re-deri
 | Doc | Status | Purpose |
 |---|---|---|
 | `docs/specs/hook-card.md` | **DRAFT** | Hook-card artifact + judgment-state contract (frozen by RTP-08/RTP-09). |
+| `docs/workbench.md` | **REFERENCE** | Phase H workbench configuration, trust path, and explicit input limitations. |
 | `docs/gates/D0-D5.md` | **APPROVED** | Re-derived gates D0 formulas, D1 BvP/shrink(+D1b), D2 pitch-unknown, D3 pen, D4 lock, D5 Brier. |
 | `docs/gates/GATES.md` | **LIVE** | Build-acceptance gates G1…G8 with `CHECK`/`EXPECT`/`EVIDENCE`. |
 | `docs/data-sources.md` | **LIVE** | Pinned inputs, fetch/verify, Chadwick cross-check, universe-A semantics. |

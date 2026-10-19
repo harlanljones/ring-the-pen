@@ -36,6 +36,7 @@ reference only.]
 {
   "schema_version": 1,
   "formula_version": "hook-card/1",
+  "generated_by": "scripts/cards.py (RTP-08; offline)",
   "license": "<Retrosheet notice>",
   "purpose": "<frozen purpose>",
   "provenance": { "sources": [{"id": ..., "sha256": ...}],
@@ -44,6 +45,11 @@ reference only.]
   "cards": [ { ... card ... } ]   // ordered by id
 }
 ```
+
+The envelope has exactly these keys. `generated_by` is emitted by the frozen
+Python builder; it is part of the contract. Synthetic artifacts may carry an
+empty source list for offline tests. Real artifacts require nonempty source
+digests, and every card's `synthetic` flag must match its artifact.
 
 Card id format **[FROZEN]**: `hook:<game_id>:<pa_index>`. The predecessor
 `role:player_id:year` form addressed season cards, not PA cards, and is not
@@ -64,7 +70,8 @@ Required per-card invariants (enforced by the trusted catalog, RTP-12):
 - stable card id `hook:<game_id>:<pa_index>` **[FROZEN]** (candidates retired);
 - outer metrics **equal** the corresponding `judgment_state` metrics for shared
   fields;
-- counts (BvP `n`, IP/PA) equal the `sample` values;
+- BvP `n` equals `samples.bvp_n`, and each upcoming slot's `n` equals the
+  corresponding `samples.upcoming_n` entry (including `null`);
 - no oracle/T+1 field reachable from the judgment state.
 
 ## 4. `judgment_state` allowlist
@@ -109,3 +116,16 @@ Every card carries: source digests (from `data/manifest.json`), `formula_version
 license (Retrosheet notice where used), purpose, and the BvP/prior provenance
 labels (`k_shrink` = `uncalibrated` until fitted). No uncalibrated constant is
 presented as calibrated.
+
+## 8. Trusted catalog API (RTP-12)
+
+`RingThePen.Catalog.load(path)` reads JSON and validates the complete artifact.
+`validate(artifact)` validates an already decoded artifact; `validate_card(card)`
+checks a card's shape, state, samples, and math without its enclosing provenance.
+Each returns `{:ok, original_map}` on success or a tagged error on failure.
+Validation never fills unknown values, repairs numbers, or removes extra keys.
+Consumers need a validated complete artifact to establish source metadata and
+agreement between artifact and card synthetic flags.
+
+Source digests are checked structurally. This does not verify source-file bytes;
+the ETL must still pass the frozen input-manifest checks before real data is used.

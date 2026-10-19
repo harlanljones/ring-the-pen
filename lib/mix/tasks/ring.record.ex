@@ -43,10 +43,15 @@ defmodule Mix.Tasks.Ring.Record do
 
     entries =
       Enum.map(destinations, fn destination ->
-        state = read_state!(destination.path)
+        state = read_state!(destination.source)
         lineage = %{"kind" => "recorded", "state_file" => destination.source}
 
-        case RingThePen.Judgments.evaluate(client, state, source_lineage: lineage) do
+        case RingThePen.Judgments.evaluate(
+               client,
+               state,
+               RingThePen.Questions.questions(),
+               source_lineage: lineage
+             ) do
           {:ok, record} ->
             Map.put(destination, :record, record)
 

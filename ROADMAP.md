@@ -12,7 +12,7 @@ to establish it. No numbers are invented.
 | Repo | greenfield `harlanljones/ring-the-pen` |
 | Stack | Elixir + Phoenix LiveView (Bandit), Python Makefile ETL, `typesafe_api` / `jev-latest` + offline fixtures |
 | Frozen pins | k=20 · N=3 · D1b reconstruct · universe A (`nump` present) · Elixir LiveView |
-| Status | RTP-01, RTP-02, RTP-05, RTP-06 DONE, TG-1…TG-5 DONE. Decisions settled (DEC-6 deferred). Done 2026-09-21 PM: RTP-07, RTP-09, RTP-10 (recordings pending). Done 2026-09-29: RTP-06 (k_shrink fit pending real pairs), RTP-11 (lock+gates; RTP-08 wiring pending), RTP-08 schema+builder (frozen real artifact pending raw). Next unblocked: RTP-12 (catalog boundary against the frozen schema, synthetic-tested), then RTP-13 |
+| Status | Historical ingest/math, question pack, typed adapter, synthetic lock/gates, and TG-1…TG-5 implemented. RTP-08 schema/builder and RTP-12 catalog ready; RTP-13 workbench and RTP-14 About implemented with synthetic replay coverage. Next: RTP-15 latency, RTP-16 evaluation, RTP-17 falsifier suite. Real RTP-06/08 artifacts still need pinned raw inputs, and RTP-10 real recordings need a key. DEC-6 remains deferred. |
 
 ---
 
@@ -425,6 +425,11 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
   `TYPESAFE_API_KEY`. Synthetic fixtures in `priv/jev/fixtures/synthetic/`
   (README-labeled, `synthetic--` prefix); `priv/jev/recordings/` is empty and a
   test enforces provenance separation — real recordings still to be captured.
+- Follow-up (2026-10-18): recording task now reads the requested state source
+  rather than its output destination and passes the frozen question pack and
+  lineage options in their correct argument positions. Three offline regression
+  tests cover the input-read path, valid-state question handoff to a loopback
+  error stub, and immutable-output refusal; no real response was captured.
 
 **RTP-11 — Confidence lock + hard code gates**
 - Depends: RTP-08, RTP-10 · Owner: Lock math
@@ -448,10 +453,20 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
 **RTP-12 — Trusted catalog boundary**
 - Depends: RTP-08 · Owner: Catalog
 - Owns: `lib/ring_the_pen/catalog.ex`.
-- Deliverable: loader enforcing exact outer keys, `id == role:player_id:year`,
+- Deliverable: loader enforcing exact outer keys, `id == hook:<game_id>:<pa_index>`
+  (the RTP-08 PA-card format; the predecessor season-card format is retired),
   outer/state metric equality, count/sample equality, oracle/state consistency.
 - Validation: boundary tests rejecting each mutation class.
 - Exit: no card reaches lock or UI without passing the catalog.
+- Status (2026-10-18): **IMPLEMENTED (synthetic-tested; real artifact pending)** —
+  `RingThePen.Catalog.load/1`, `validate/1`, and `validate_card/1` enforce the
+  frozen Python builder envelope, PA-card ids, state allowlist, provenance
+  shape, synthetic flags, and count/metric/shrink consistency. Fifteen focused
+  tests cover mutation rejection, unknowns, the 19/20/21 boundary, and loading
+  actual synthetic Python-builder output. Full offline ExUnit suite: 94 passed;
+  format and strict compilation pass. This does not complete CP-H2: frozen
+  real cards and Jev recordings are still absent. Python integration checks and
+  input verification remain blocked by missing pinned raw files in this checkout.
 
 ### M3 — Phase H workbench
 
@@ -464,6 +479,19 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
   questions hash, model, recorded_at).
 - Validation: LiveView tests for every lock route and empty/unknown states.
 - Exit: no card route renders without a lock; falsifier "no lock" exercised.
+- Status (2026-10-18): **IMPLEMENTED (synthetic replay; real demo blocked)** —
+  file-backed `RingThePen.Workbench.open/1` requires a trusted catalog, one
+  matching validated judgment with correct lineage, and a lock route before
+  card metrics/verdict render. LiveView card selection patches the route;
+  invalid/missing/ambiguous inputs clear earlier results. Synthetic data is
+  off by default and explicitly labeled when opted into in development/test.
+  The frozen schema lacks player names, pitch cap, injury, and empty-pen inputs;
+  the UI keeps them Unknown. Real historical card/recording replay is pending.
+  Ten focused workbench tests pass; final full offline ExUnit suite: 108 passed.
+  Formatter, strict compilation, and asset build pass. Chromium checks at
+  1440/375px pass for empty/About/explicit synthetic mode, no-reload selection,
+  stale-result clearing, keyboard navigation, and no horizontal body overflow.
+  Runtime configuration and limitations: `docs/workbench.md`.
 
 **RTP-14 — `/about` formulas, provenance, license status**
 - Depends: RTP-12 · Owner: Web
@@ -473,6 +501,12 @@ and freeze a hook-path golden vector for the ETL/Elixir boundary.
 - Validation: content tests; no claim of calibration, no Retrosheet-as-live text.
 - Exit: D0 surface satisfied; falsifiers "Retrosheet as live" and "instant from
   pitch" absent.
+- Status (2026-10-18): **IMPLEMENTED (content tested)** — `/about` publishes
+  versioned formulas, current lock thresholds, provisional `k_display`,
+  uncalibrated shrink/model labels, intended prior windows and pending real
+  extraction, required Retrosheet attribution, and H/L/P license limits. Seven
+  focused tests pass. D0's real-input/formula acceptance remains pending its
+  other dependencies; no latency, calibration, or real-data claim is made.
 
 **RTP-15 — D7 latency panel**
 - Depends: RTP-13 · Owner: Workbench

@@ -14,5 +14,7 @@ defmodule RingThePenWeb.Router do
     pipe_through :browser
 
     live "/", WorkbenchLive
+    live "/cards/:id", WorkbenchLive
+    live "/about", AboutLive
   end
 end
